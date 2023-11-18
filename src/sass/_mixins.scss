@@ -1,0 +1,144 @@
+@mixin color($bg-color) {
+	@if lightness($bg-color) > 60 {
+		color: $text-color;
+	} @else {
+		color: $text-color-white;
+	}
+}
+
+
+@mixin bg-color($color) {
+	background-color: $color;
+	@include color($color);
+}
+
+
+@mixin flex($ai: center, $jc: center) {
+	display: flex;
+	align-items: $ai;
+	justify-content: $jc;
+}
+
+@mixin mq($size) {
+	@media screen and (min-width: $size) {
+		@content;
+	}
+}
+
+@mixin mq-max($size) {
+	@media screen and (max-width: $size) {
+		@content;
+	}
+}
+
+@mixin bg-image($url) {
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+@mixin btn-hover($color) {
+	position: relative;
+	overflow: hidden;
+
+	&::before,
+	&::after {
+		content: '';
+	    position: absolute;
+	    top: 50%;
+	    // z-index: -1;
+	    padding: 10px;
+	    border-radius: 50%;
+	    opacity: 1;
+	    transition: 0s;
+	    will-change: transform;
+		
+	}
+
+	&::before {
+		left: -30%;
+    	transform: translate(-50%, -50%);
+	}
+
+	&::after {
+		right: -30%;
+    	transform: translate(50%, -50%);
+	}
+
+	&:hover {
+		@include color($color);
+		transition: color .3s .5s;
+		@include bg-color($color);
+		
+	}
+
+	&:hover::before,
+	&:hover::after {
+		padding: 50%;
+    	transition: left .4s, right .4s, padding .3s .5s, opacity .05s .75s;
+	}
+
+	&:hover::before {
+		left: 50%;
+		background-color: darken($color, 5%);
+	}
+	&:hover::after {
+		right: 50%;
+		background-color: darken($color, 5%);
+	}
+}
+
+@mixin btn-hover-outline($color) {
+	position: relative;
+	overflow: hidden;
+
+	&::before,
+	&::after {
+		content: '';
+	    position: absolute;
+	    top: 50%;
+	    // z-index: -1;
+	    padding: 10px;
+	    border-radius: 50%;
+	    // opacity: 1;
+	    transition: 0s;
+	    will-change: transform;
+		z-index: 0;
+		
+	}
+
+	&::before {
+		left: -30%;
+    	transform: translate(-50%, -50%);
+	}
+
+	&::after {
+		right: -30%;
+    	transform: translate(50%, -50%);
+	}
+
+	&:hover {
+		border: solid white 2px;
+		@include color($color);
+		transition: color .3s .5s;
+	}
+
+	&:hover::before,
+	&:hover::after {
+		padding: 60%;
+    	transition: left .4s, right .4s, padding .3s .5s, opacity .05s .75s;
+		z-index: 0;
+	}
+
+	&:hover::before {
+		left: 50%;
+		background-color: $color;
+		@include color($color);
+	}
+	&:hover::after {
+		right: 50%;
+		background-color: $color;
+		@include color($color);
+	}
+}

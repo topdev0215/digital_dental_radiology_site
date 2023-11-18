@@ -1,0 +1,47 @@
+.swiper-container {
+    width: 100%;
+}
+
+.swiper-wrapper {
+    padding: 1rem 0;
+}
+
+.swiper-slide {
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.prices__swiper .swiper-button-prev,
+.prices__swiper .swiper-button-next {
+    transform: scale(0.6);
+    color: $text-color-white;
+
+    @include mq(1250px) {
+        display: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.prices__swiper .swiper-button-prev {
+    left: 0;
+}
+.prices__swiper .swiper-button-next {
+    right: 0;
+}
+
+// .animals__swiper {
+//     width: 90%;
+
+//     .swiper-slide {
+//         // border: 1px solid red;
+//         // max-width: 30rem;
+//     }
+// }

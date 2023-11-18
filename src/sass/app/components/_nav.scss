@@ -1,0 +1,84 @@
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 1.5rem 0;
+	z-index: 1000;
+
+	&__container {
+		overflow: visible;
+		@include flex(center, space-between);
+	}
+
+	&__list {
+		width: 50%;
+
+		@include mq(1200px) {
+			// width: 40%;
+		}
+
+		li.active {
+			a::before {
+				width: 2rem;
+			}
+		}
+
+		a {
+			display: inline-block;
+			color: $text-color-white;
+			font-size: 1.4rem;
+			text-transform: capitalize;
+			position: relative;
+			@include mq(1200px) {
+				font-size: 1.8rem;
+				font-weight: 600;
+			}
+
+
+			&::before {
+				content: '';
+				width: 0;
+				height: 2px;
+				background-color: $primary-color;
+				position: absolute;
+				bottom: -5px;
+				left: 0;
+				transition: width $t-time $t-ease;
+			}
+
+			&:hover::before {
+				width: 100%;
+			}
+
+			&.active {
+
+				
+			}
+		}
+	}
+}
+
+.navigation-toggler,
+.info-button {
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+	background-color: transparent;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	@include flex;
+	color: $text-color-white;
+	font-size: 1.6rem;
+	position: relative;
+	transition: color $t-time linear;
+
+	&:hover {
+		color: $primary-color;
+	}
+
+	i {
+		position: absolute;
+	}
+}

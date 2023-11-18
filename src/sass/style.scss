@@ -1,0 +1,12 @@
+@import './vars';
+@import './mixins';
+@import './globals';
+// Components
+@import './app/components/nav';
+@import './app/components/navigation';
+@import './app/components/section';
+@import './app/components/prices';
+@import './app/components/form';
+@import './app/components/loader';
+// Vendors
+@import './app/vendors/swiper';

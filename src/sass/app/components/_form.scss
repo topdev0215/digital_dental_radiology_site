@@ -1,0 +1,33 @@
+.form {
+	width: 100%;
+
+		&__group {
+			margin-bottom: 1rem;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+			outline: none;
+			background: transparent;
+			border: 1px solid $form-color;
+			padding: 1rem 1.5rem;
+			border-radius: 0.5rem;
+			color: $text-color-white;
+			transition: background-color $t-time linear;
+			cursor: pointer;
+
+			&::placeholder {
+				color: $text-color-white;
+			}
+
+			&:hover,
+			&:focus {
+				background-color: rgba(black, 0.25);
+			}
+		}
+
+		input {
+			display: inline-block;
+		}
+}

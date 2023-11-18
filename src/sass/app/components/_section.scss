@@ -1,0 +1,236 @@
+.section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    height: 100vh;
+  }
+
+  &__wrapper {
+    height: 100%;
+    @include flex;
+    flex-direction: column;
+    // padding-top: 10vh;
+
+    @include mq(768px) {
+      padding-top: 0;
+      padding-left: 5rem;
+      align-items: flex-start;
+    }
+    @include mq(900px) {
+      padding-top: 0;
+      flex-direction: row;
+      align-items: center;
+
+      &.img-left {
+        flex-direction: row-reverse;
+
+        // .section__image img {
+        // 	top: 0;
+        // 	right: auto;
+        // 	left: 0;
+        // 	bottom: 0;
+        // }
+      }
+    }
+    @include mq(1200px) {
+      padding-left: 0;
+    }
+
+    .left,
+    .right {
+      width: 100%;
+      @include mq(900px) {
+        width: 50%;
+      }
+    }
+
+    .left--large {
+      @include mq(900px) {
+        width: 70%;
+      }
+
+      & + .right {
+        width: 30%;
+      }
+    }
+
+    .right.video {
+      @include flex(flex-start);
+
+      @include mq-max(900px) {
+        margin-top: 5rem;
+      }
+
+      // @include mq(900px) {
+      // 	margin-top: 0;
+      // 	margin-left: 10rem;
+      // }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    // width: 100%;
+    // height: 30vh;
+    padding-bottom: 10vh;
+
+    @include mq(900px) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: 375px) and (min-height: 812px) {
+      padding-bottom: 10vh;
+      padding-top: 5rem;
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+
+      @include mq(768px) {
+        width: 60%;
+        left: auto;
+        right: 0;
+        bottom: 0;
+        transform: translateX(0);
+      }
+
+      @include mq(900px) {
+        width: 50%;
+      }
+
+      @include mq(1200px) {
+        width: 59%;
+      }
+    }
+  }
+
+  &__layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    @include flex;
+
+    @include mq-max(768px) {
+      svg {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    @include mq(900px) {
+      left: 10%;
+    }
+
+    .layer {
+      position: absolute;
+      width: auto;
+      height: 90%;
+      flex: 0 0 auto;
+      z-index: 0;
+    }
+  }
+}
+
+.machine1 {
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: 0;
+  transform: translate(0);
+  width: 150%;
+}
+
+.microscope {
+  .section__image img {
+    width: 30%;
+    bottom: 0;
+    @include mq(768px) {
+    	width: 30% !important;
+    	right: 1% !important;
+    }
+    @include mq(900px) {
+      bottom: auto;
+      top: 0;
+      left: auto;
+      right: 5%;
+      width: 30%;
+    }
+
+    @include mq(1200px) {
+      right: 5%;
+      width: 30%;
+    }
+  }
+
+  .text{
+    padding-top: 8em;
+    width: 100%;
+    p {
+      width: 45%;
+    }
+  }
+
+  .line {
+    width: 10rem;
+    height: 25rem;
+    border-right: solid #B4B4B4 2px;
+  }
+
+  
+}
+
+.ortodontie .section__image img {
+  @include mq-max(767px) {
+    left: 5%;
+    bottom: 0;
+  }
+}
+
+.plan .section__image img {
+  max-width: 65rem;
+
+  @include mq(500px) {
+    width: 45%;
+  }
+}
+
+.prices {
+  .section__image img {
+    max-width: 50rem;
+    width: 55%;
+    bottom: -15%;
+    left: auto;
+    right: -30%;
+
+    @include mq(768px) {
+      width: 40%;
+      right: -20%;
+      bottom: 0;
+    }
+
+    @include mq(900px) {
+      width: 35%;
+      right: 0;
+    }
+  }
+}
+
+.contact {
+  .section__image img {
+    width: 60%;
+    right: 0;
+    bottom: 0;
+
+    @include mq(500px) {
+      width: 40%;
+    }
+  }
+}
