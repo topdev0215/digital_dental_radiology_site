@@ -18,6 +18,8 @@ const fullpageInstance = new fullpage('#fullpage', {
         const jsSlideRightEls = document.querySelectorAll('.js-slide-right');
         const jsSlideUpEls = document.querySelectorAll('.js-slide-up');
         const jsSlideDownEls = document.querySelectorAll('.js-slide-down');
+        const jsSlideUpRight = document.querySelectorAll('.js-slide-upright');
+        const jsSlideUpLeft = document.querySelectorAll('.js-slide-upleft');
         setSectionElsTranslate();
     },
 

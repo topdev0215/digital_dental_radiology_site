@@ -10,20 +10,20 @@ export function sectionAnimation(section) {
     }
     const tl = anime.timeline({duration: DURATION, easing: 'cubicBezier(0.375, 0.485, 0.332, 0.99)'});
     tl
-    // .add({
-    //     targets: section.querySelectorAll('.layer-item:nth-child(odd)'),
-    //     translateX: ['-150%', 0],
-    //     translateY: ['150%', 0],
-    //     easing: 'easeInOutQuad',
-    //     translateZ: 0,
-    // })
-    // .add({
-    //     targets: section.querySelectorAll('.layer-item:nth-child(even)'),
-    //     translateX: ['150%', 0],
-    //     translateY: ['-150%', 0],
-    //     easing: 'easeInOutQuad',
-    //     translateZ: 0,
-    // }, `-=${DURATION}`)
+    .add({
+        targets: section.querySelector('.js-slide-downleft'),
+        translateX: ['-150%', 0],
+        translateY: ['150%', 0],
+        easing: 'easeInOutQuad',
+        translateZ: 0,
+    })
+    .add({
+        targets: section.querySelector('.js-slide-upright'),
+        translateX: ['150%', 0],
+        translateY: ['-150%', 0],
+        easing: 'easeInOutQuad',
+        translateZ: 0,
+    }, `-=${DURATION}`)
     .add({
         targets: section.querySelector('.js-slide-left'),
         translateX: ['-150%', 0],
@@ -66,6 +66,20 @@ export function sectionLeaveAnimation(section) {
     const tl = anime.timeline({duration: DURATION, easing: 'easeInOutQuad'});
     tl
     .add({
+        targets: section.querySelector('.js-slide-downleft'),
+        translateX: '-150%',
+        translateY: '150%',
+        easing: 'easeInOutQuad',
+        translateZ: 0,
+    })
+    .add({
+        targets: section.querySelector('.js-slide-upright'),
+        translateX: '150%',
+        translateY: '-150%',
+        easing: 'easeInOutQuad',
+        translateZ: 0,
+    }, 0)
+    .add({
         targets: section.querySelector('.js-slide-left'),
         translateX: '-150%',
         translateZ: 0,
@@ -84,7 +98,7 @@ export function sectionLeaveAnimation(section) {
         targets: section.querySelector('.js-slide-down'),
         translateY: '150%',
         translateZ: 0,
-    }, `-=${DURATION}`)
+    }, 0)
     .add({
         targets: section.querySelector('.js-slide-bot'),
         translateY: '150%',

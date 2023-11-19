@@ -71,45 +71,6 @@
     }
   }
 
-  &__image {
-    width: 100%;
-    // width: 100%;
-    // height: 30vh;
-    padding-bottom: 10vh;
-
-    @include mq(900px) {
-      width: 50%;
-    }
-
-    @media screen and (max-width: 375px) and (min-height: 812px) {
-      padding-bottom: 10vh;
-      padding-top: 5rem;
-    }
-
-    img {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80%;
-
-      @include mq(768px) {
-        width: 60%;
-        left: auto;
-        right: 0;
-        bottom: 0;
-        transform: translateX(0);
-      }
-
-      @include mq(900px) {
-        width: 50%;
-      }
-
-      @include mq(1200px) {
-        width: 59%;
-      }
-    }
-  }
-
   &__layer {
     width: 100%;
     height: 100%;
@@ -145,7 +106,7 @@
   right: 0;
   top: 0;
   transform: translate(0);
-  width: 150%;
+  width: 60%;
 }
 
 .microscope {
@@ -153,8 +114,8 @@
     width: 30%;
     bottom: 0;
     @include mq(768px) {
-    	width: 30% !important;
-    	right: 1% !important;
+      width: 30% !important;
+      right: 1% !important;
     }
     @include mq(900px) {
       bottom: auto;
@@ -170,7 +131,7 @@
     }
   }
 
-  .text{
+  .text {
     padding-top: 8em;
     width: 100%;
     p {
@@ -181,24 +142,69 @@
   .line {
     width: 10rem;
     height: 25rem;
-    border-right: solid #B4B4B4 2px;
-  }
-
-  
-}
-
-.ortodontie .section__image img {
-  @include mq-max(767px) {
-    left: 5%;
-    bottom: 0;
+    border-right: solid #b4b4b4 2px;
   }
 }
 
-.plan .section__image img {
-  max-width: 65rem;
+.ortodontie {
+  .gallery {
+    padding-top: 7rem;
+  }
 
-  @include mq(500px) {
-    width: 45%;
+  .text {
+    padding-top: 30rem;
+  }
+
+  .search-box {
+    scale: 0.75;
+    position: relative;
+    width: 20rem;
+
+    .search-input {
+      height: 3.8rem;
+      font-size: 18px;
+      font-weight: 100;
+      border-radius: 0;
+    }
+
+    .fa-search {
+      position: absolute;
+      top: 1.3rem;
+      left: 1.5rem;
+    }
+
+    .fa-close {
+      cursor: pointer;
+      position: absolute;
+      top: 1.3rem;
+      right: 1rem;
+    }
+  }
+
+  .gallery-box {
+    background-color: rgb(245,246,250);
+    border-radius: 10px;
+    overflow: scroll;
+    height: 83vh;
+  }
+
+  .gallery {
+    flex-wrap: wrap;
+    padding: 0 4px;
+
+    img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+  }
+
+  .detail-box {
+    padding: 3rem 20rem 2rem 3rem;
+    position: absolute;
+    right: -2rem;
+    top: 56vh;
+    @include bg-color($primary-color-opacity);
   }
 }
 

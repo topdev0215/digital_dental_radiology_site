@@ -23,7 +23,7 @@ h2,
 h3,
 h4 {
   font-family: $font-primary;
-  line-height: 1;
+  line-height: 3rem;
   margin-bottom: 2rem;
 }
 
@@ -40,10 +40,7 @@ a {
   text-decoration: none;
 }
 
-img {
-  display: inline-block;
-  max-width: 100%;
-}
+
 
 svg {
   overflow: hidden;
@@ -66,7 +63,15 @@ svg {
 }
 
 .text_second {
+	color: $primary-color;
+  font-size: 2rem;
+  font-weight: 200;
+
+}
+
+.text_subhead {
 	color: #583229;
+  font-size: 2.5rem;
 }
 
 .relative {
@@ -113,8 +118,10 @@ svg {
 }
 
 .logo {
+  position: absolute;
   display: inline-block;
-  width: 17rem;
+  width: auto;
+  height: auto;
 }
 
 // Visibility

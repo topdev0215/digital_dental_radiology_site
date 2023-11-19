@@ -32,6 +32,8 @@ export function setSectionElsTranslate(parent = document){
 	const jsSlideDownEls = parent.querySelectorAll('.js-slide-down');
 	const jsSlideBot = parent.querySelectorAll('.js-slide-bot');
 	const layers = parent.querySelectorAll('.layer-item');
+	const jsSlideUpRight = parent.querySelectorAll('.js-slide-upright');
+	const jsSlideUpLeft = parent.querySelectorAll('.js-slide-upleft');
 	jsSlideLeftEls.forEach(el => {
 		el.style.transform = 'translateX(-150%)';
 	});
@@ -46,6 +48,12 @@ export function setSectionElsTranslate(parent = document){
 	});
 	jsSlideBot.forEach(el => {
 		el.style.transform = 'translateY(150%)';
+	});
+	jsSlideUpRight.forEach(el => {
+		el.style.transform = 'translateX(150%) translateY(-150%)';
+	});
+	jsSlideUpLeft.forEach(el => {
+		el.style.transform = 'translateX(-150%) translateY(150%)';
 	});
 	layers.forEach((el, idx) => {
 		if (idx % 2 === 0) el.style.transform = 'translateX(150%) translateY(-150%)';
