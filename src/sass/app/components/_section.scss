@@ -208,6 +208,25 @@
   }
 }
 
+.implantologie {
+  .main-box {
+    width: auto;
+    height: 100vh;
+    padding-top: 23rem;
+  }
+
+  .text {
+    position: relative;
+  }
+
+  .implant {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top:2rem;
+  }
+}
+
 .prices {
   .section__image img {
     max-width: 50rem;

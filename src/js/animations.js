@@ -11,20 +11,6 @@ export function sectionAnimation(section) {
     const tl = anime.timeline({duration: DURATION, easing: 'cubicBezier(0.375, 0.485, 0.332, 0.99)'});
     tl
     .add({
-        targets: section.querySelector('.js-slide-downleft'),
-        translateX: ['-150%', 0],
-        translateY: ['150%', 0],
-        easing: 'easeInOutQuad',
-        translateZ: 0,
-    })
-    .add({
-        targets: section.querySelector('.js-slide-upright'),
-        translateX: ['150%', 0],
-        translateY: ['-150%', 0],
-        easing: 'easeInOutQuad',
-        translateZ: 0,
-    }, `-=${DURATION}`)
-    .add({
         targets: section.querySelector('.js-slide-left'),
         translateX: ['-150%', 0],
         translateZ: 0,
@@ -51,6 +37,20 @@ export function sectionAnimation(section) {
             duration: 10
         },
         translateY: ['150%', 0],
+        translateZ: 0,
+    }, `-=${DURATION}`)
+    .add({
+        targets: section.querySelector('.js-slide-downleft'),
+        translateX: ['-150%', 0],
+        translateY: ['150%', 0],
+        easing: 'easeInOutQuad',
+        translateZ: 0,
+    })
+    .add({
+        targets: section.querySelector('.js-slide-upright'),
+        translateX: ['150%', 0],
+        translateY: ['-150%', 0],
+        easing: 'easeInOutQuad',
         translateZ: 0,
     }, `-=${DURATION}`)
     
