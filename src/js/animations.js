@@ -1,6 +1,6 @@
 import anime from 'animejs/lib/anime.es.js';
 
-const DURATION = 800;
+const DURATION = 600;
 
 
 export function sectionAnimation(section) {
@@ -11,6 +11,11 @@ export function sectionAnimation(section) {
     const tl = anime.timeline({duration: DURATION, easing: 'cubicBezier(0.375, 0.485, 0.332, 0.99)'});
     tl
     .add({
+        targets: section.querySelector('.js-slide-up'),
+        translateY: ['-150%', 0],
+        translateZ: 0,
+    })
+    .add({
         targets: section.querySelector('.js-slide-left'),
         translateX: ['-150%', 0],
         translateZ: 0,
@@ -18,16 +23,6 @@ export function sectionAnimation(section) {
     .add({
         targets: section.querySelector('.js-slide-right'),
         translateX: ['150%', 0],
-        translateZ: 0,
-    }, `-=${DURATION}`)
-    .add({
-        targets: section.querySelector('.js-slide-up'),
-        translateY: ['-150%', 0],
-        translateZ: 0,
-    })
-    .add({
-        targets: section.querySelector('.js-slide-down'),
-        translateY: ['150%', 0],
         translateZ: 0,
     }, `-=${DURATION}`)
     .add({
@@ -54,6 +49,11 @@ export function sectionAnimation(section) {
         translateZ: 0,
     }, `-=${DURATION}`)
     
+    .add({
+        targets: section.querySelector('.js-slide-down'),
+        translateY: ['150%', 0],
+        translateZ: 0,
+    }, `-=${DURATION}`)
 
     return tl;
 }
@@ -71,7 +71,7 @@ export function sectionLeaveAnimation(section) {
         translateY: '150%',
         easing: 'easeInOutQuad',
         translateZ: 0,
-    })
+    }, 0)
     .add({
         targets: section.querySelector('.js-slide-upright'),
         translateX: '150%',
@@ -83,7 +83,7 @@ export function sectionLeaveAnimation(section) {
         targets: section.querySelector('.js-slide-left'),
         translateX: '-150%',
         translateZ: 0,
-    })
+    }, 0)
     .add({
         targets: section.querySelector('.js-slide-right'),
         translateX: '150%',
@@ -93,7 +93,7 @@ export function sectionLeaveAnimation(section) {
         targets: section.querySelector('.js-slide-up'),
         translateY: '-150%',
         translateZ: 0,
-    })
+    }, 0)
     .add({
         targets: section.querySelector('.js-slide-down'),
         translateY: '150%',

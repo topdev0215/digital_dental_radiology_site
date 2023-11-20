@@ -56,19 +56,6 @@
         width: 30%;
       }
     }
-
-    .right.video {
-      @include flex(flex-start);
-
-      @include mq-max(900px) {
-        margin-top: 5rem;
-      }
-
-      // @include mq(900px) {
-      // 	margin-top: 0;
-      // 	margin-left: 10rem;
-      // }
-    }
   }
 
   &__layer {
@@ -100,39 +87,56 @@
   }
 }
 
-.machine1 {
-  position: absolute;
-  left: auto;
-  right: 0;
-  top: 0;
-  transform: translate(0);
-  width: 60%;
+.index {
+  .text {
+    @include mq(768px){
+      padding-top: 8rem;
+    }
+    padding-top: 1rem;
+  }
+  .logo {
+    position: relative;
+  }
+  .machine1 {
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 0;
+    transform: translate(0);
+    width: 60%;
+  }
+  .btn--anis {
+    @include mq(768px) {
+      @include bg-color($primary-color);
+    border: none;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: white;
+    }
+    @include bg-color($transparency);
+    border: solid $primary-color 2px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(0, 60, 138);
+  }
 }
 
 .microscope {
+
+  .logo {
+    position: relative;
+  }
+  
   .section__image img {
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 30%;
     bottom: 0;
-    @include mq(768px) {
-      width: 30% !important;
-      right: 1% !important;
-    }
-    @include mq(900px) {
-      bottom: auto;
-      top: 0;
-      left: auto;
-      right: 5%;
-      width: 30%;
-    }
-
-    @include mq(1200px) {
-      right: 5%;
-      width: 30%;
-    }
   }
 
   .text {
-    padding-top: 8em;
+    padding-top: 8.8em;
     width: 100%;
     p {
       width: 45%;
@@ -147,12 +151,18 @@
 }
 
 .ortodontie {
+  .text_head {
+    text-align: end;
+  }
+  .text_primary {
+    text-align: end;
+  }
   .gallery {
     padding-top: 7rem;
   }
 
   .text {
-    padding-top: 30rem;
+    padding-top: 25rem;
   }
 
   .search-box {
@@ -182,7 +192,7 @@
   }
 
   .gallery-box {
-    background-color: rgb(245,246,250);
+    background-color: rgb(245, 246, 250);
     border-radius: 10px;
     overflow: scroll;
     height: 83vh;
@@ -204,6 +214,7 @@
     position: absolute;
     right: -2rem;
     top: 56vh;
+    color: white;
     @include bg-color($primary-color-opacity);
   }
 }
@@ -223,39 +234,122 @@
     width: auto;
     height: auto;
     position: absolute;
-    top:2rem;
+    top: 2rem;
   }
 }
 
-.prices {
-  .section__image img {
-    max-width: 50rem;
-    width: 55%;
-    bottom: -15%;
-    left: auto;
-    right: -30%;
+.protetica {
+  .bottom-img {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    z-index: 0;
+  }
 
-    @include mq(768px) {
-      width: 40%;
-      right: -20%;
-      bottom: 0;
+  .text {
+    z-index: 1;
+  }
+
+  .align-items-center {
+    height: 70vh;
+  }
+}
+
+.team {
+  .text_head {
+    text-align: center;
+  }
+  .logo {
+    position: relative;
+    width: auto;
+    height: auto;
+  }
+
+  .member-box {
+    scale: 0.8;
+    .bg-white {
+      border: 0.5px solid #e2e2e2;
     }
 
-    @include mq(900px) {
-      width: 35%;
-      right: 0;
+    .btn--anis {
+      width: 30rem;
     }
   }
 }
 
 .contact {
-  .section__image img {
-    width: 60%;
-    right: 0;
-    bottom: 0;
+  .text {
+    padding-top: 10rem;
+  }
 
-    @include mq(500px) {
-      width: 40%;
+  .text_head {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  .text_primary {
+    text-align: center;
+  }
+
+  .map {
+    width: 100%;
+    height: 58vh;
+  }
+
+  form {
+    width: 100%;
+    height: 58vh;
+    border: 1px solid #318470;
+    justify-content: center;
+    align-items: center;
+
+    .input-box {
+      display: flex;
+      justify-content: flex-end;
+      width: 80%;
+      padding-top: 1.5rem;
+    }
+
+    input {
+      width: 80%;
+      border: none;
+      border-bottom: solid #bdbdbd 0.5px;
+      background: transparent;
+      &:focus {
+        border: none;
+        outline: none;
+        border-bottom: solid #000000 0.5px;
+      }
+    }
+
+    .textarea-box {
+      padding-top: 1.5rem;
+      width: 80%;
+      height: auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    textarea {
+      width: 80%;
+      height: 25rem;
+      padding: 12px 20px;
+      // box-sizing: border-box;
+      border: solid #bdbdbd 0.5px;
+      border-radius: 4px;
+      background-color: transparent;
+      font-size: 16px;
+      resize: none;
+
+      &:focus {
+        outline: none;
+        border: solid #000000 0.5px;
+      }
+    }
+
+    .submit-btn {
+      font-weight: normal;
+      padding: 0.8rem 6rem;
     }
   }
 }

@@ -9,7 +9,6 @@
 
 @mixin bg-color($color) {
 	background-color: $color;
-	@include color($color);
 }
 
 
@@ -42,6 +41,10 @@
 	position: relative;
 	overflow: hidden;
 
+
+	&:active {
+		@include bg-color($color);
+	}
 	&::before,
 	&::after {
 		content: '';
@@ -53,17 +56,20 @@
 	    opacity: 1;
 	    transition: 0s;
 	    will-change: transform;
+		@include bg-color($color);
 		
 	}
 
 	&::before {
 		left: -30%;
     	transform: translate(-50%, -50%);
+		@include bg-color($color);
 	}
-
+	
 	&::after {
 		right: -30%;
     	transform: translate(50%, -50%);
+		@include bg-color($color);
 	}
 
 	&:hover {

@@ -40,38 +40,54 @@ a {
   text-decoration: none;
 }
 
-
-
 svg {
   overflow: hidden;
   vertical-align: middle;
 }
 
 .text_primary {
+  @include mq(768px) {
+    color: $text-color;
+    font-family: $font-primary;
+    font-weight: 100;
+    font-size: 1.5rem;
+    text-align: start;
+  }
+  text-align: center;
   color: $text-color;
   font-family: $font-primary;
-  font-weight: bold;
-  font-size: 1.5rem;
+  font-weight: 100;
+  font-size: 1rem;
 }
 
 .text_head {
   color: $primary-color;
   font-family: $font-primary;
-  font-weight: 900;
-  font-size: 6rem;
-  line-height: 8rem;
+  font-weight: 100;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 0;
+  @include mq(768px) {
+    text-align: start;
+    color: $primary-color;
+    font-family: $font-primary;
+    font-weight: 600;
+    font-size: 6rem;
+    line-height: 8rem;
+  }
 }
 
 .text_second {
-	color: $primary-color;
+  color: $primary-color;
   font-size: 2rem;
   font-weight: 200;
-
 }
 
 .text_subhead {
-	color: #583229;
+  color: #583229;
   font-size: 2.5rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
 }
 
 .relative {
@@ -88,15 +104,25 @@ svg {
 }
 
 .copyrignt {
-	position: absolute;
-	font-size: 13px;
-	font-family: $font-primary;
-	bottom: 3rem;
-	left: 40vw;
+  @include mq(768px) {
+    position: absolute;
+    font-size: 13px;
+    font-family: $font-primary;
+    bottom: 3rem;
+    left: 40vw;
+  }
+  position: absolute;
+  font-size: 13px;
+  font-family: $font-primary;
+  bottom: 3rem;
+  left: 6vw;
 }
 
 .card-box {
-  padding-top: 150px;
+  padding-top: 10px;
+  @include mq(1200px) {
+    padding-top: 150px;
+  }
 }
 
 .flex {
@@ -291,7 +317,16 @@ svg {
 }
 .card {
   @include bg-image("../images/card_bg.png");
-  height: 25rem;
+  height: 9rem;
+  @include mq(768px) {
+    height: 20rem;
+  }
+  @include mq(960px) {
+    height: 20rem;
+  }
+  @include mq(1200px) {
+    height: 23rem;
+  }
 }
 
 // Text
@@ -340,7 +375,7 @@ svg {
   padding: 1rem 2rem;
 
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: capitalize;
 
   @include mq(1200px) {
@@ -355,20 +390,23 @@ svg {
   &--anis {
     @include btn-hover($primary-color);
     border: 0;
-
+    outline: none;
     span {
       position: relative;
       z-index: 2;
+    }
+    &:target {
+      @include bg-color($second-color);
     }
   }
 
   &--square {
     @include btn-hover($primary-color);
     border: 0;
-	padding: 1rem 12rem 1rem 15rem;
+    padding: 1rem 12rem 1rem 15rem;
 
     span {
-	  font-size: 2rem;
+      font-size: 2rem;
       position: relative;
       z-index: 2;
     }
