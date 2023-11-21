@@ -64,10 +64,10 @@ svg {
   color: $primary-color;
   font-family: $font-primary;
   font-weight: 100;
-  font-size: 3rem;
-  text-align: center;
+  font-size: 4rem;
+  text-align: start;
   margin-bottom: 0;
-  @include mq(768px) {
+  @include mq(1200px) {
     text-align: start;
     color: $primary-color;
     font-family: $font-primary;
@@ -96,30 +96,33 @@ svg {
 }
 
 .container {
+  @include mq(768px) {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    overflow: hidden;
+  }
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 0rem;
   overflow: hidden;
 }
 
-.copyrignt {
-  @include mq(768px) {
-    position: absolute;
-    font-size: 13px;
-    font-family: $font-primary;
-    bottom: 3rem;
-    left: 40vw;
-  }
+footer {
+  display: block;
+  width: 100vw;
   position: absolute;
+  bottom: 10px;
+}
+
+.copyrignt {
   font-size: 13px;
   font-family: $font-primary;
-  bottom: 3rem;
-  left: 6vw;
 }
 
 .card-box {
-  padding-top: 10px;
   @include mq(1200px) {
     padding-top: 150px;
   }
@@ -144,10 +147,20 @@ svg {
 }
 
 .logo {
+  @include mq(768px) {
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding-left: 2rem;
+  }
+  cursor: pointer;
   position: absolute;
   display: inline-block;
-  width: auto;
+  width: 13rem;
   height: auto;
+  padding-left: 2rem;
 }
 
 // Visibility
@@ -317,7 +330,7 @@ svg {
 }
 .card {
   @include bg-image("../images/card_bg.png");
-  height: 9rem;
+  height: 10rem;
   @include mq(768px) {
     height: 20rem;
   }
@@ -481,7 +494,6 @@ svg {
 @include mq(1200px) {
   .bg-first {
     .text {
-      max-width: 58rem;
       text-align: justify;
       overflow: hidden;
     }

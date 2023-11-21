@@ -27,13 +27,12 @@
 	<link rel="stylesheet" href="./main.css">
 	<script src="./main.js" defer></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 	<!-- page loader -->
 	<div class="loader">
@@ -43,12 +42,11 @@
 
 	<main id="fullpage">
 		<!-- First page -->
-		<section class="section bg-first index">
+		<!-- <section class="section bg-first index">
 			<div class="container">
-				<div class="d-flex flex-column">
-					<div class="row relative">
+					<div class="row relative d-flex justify-content-center">
 						<div class="justify-content-start js-slide-left z-2">
-							<img class="logo py-md-5" src="./images/logo.svg" alt="Logo">
+							<img class="logo py-md-5 p-2" src="./images/logo.svg" alt="Logo">
 							<div class="text">
 								<h2 class="text_head">RADIOLOGIE <br /> DENTARĂ DIGITALĂ</h2>
 								<div class="text_primary">Pentru un diagnostic precis și planificare personalizată a
@@ -59,52 +57,50 @@
 								</div>
 							</div>
 						</div>
-						<div class="row z-2 card-box js-slide-down">
+						<div class="row z-2 card-box js-slide-down px-0">
 							<div class="col-xl-3 col-md-6 col-12">
-								<div class="card m-3 px-md-4 px-2 pt-lg-5 pt-md-3 pt-2 m-0">
-									<div class="text-head p-md-2 mb-0 text-white">RX DENTAR</div>
-									<p class="text-white font-primary fs-md-5 fs-10">Sistem de ultima generatie, cu
-										control automat al timpului de
-										expunere, in
-										functie de programul selectat; multiple programe presetate, in functie de
-										detaliile
-										anatomice ale pacientului, posibilitate operare cu senzor digital sau film.
-									</p>
+								<div class="card m-2 px-md-4 px-2 pt-lg-5 pt-md-3 pt-2 m-0">
+									<div class="text-head py-md-2 mb-0 text-white text-sm-start text-center py-1">RX DENTAR</div>
 									<div class="cta">
-										<a href="#" class="btn btn--anis"><span class="px-4">Citeste...</span></a>
+										<a href="#" class="btn btn--anis"><span class="px-lg-4 px-3 p-0">Citeste...</span></a>
 									</div>
+									<p class="text-white font-primary fs-10 text-md-start text-center">
+										Sistem de ultima generatie, cu control automat al timpului de
+										expunere, in functie de programul selectat; multiple programe presetate, in functie de
+										detaliile anatomice ale pacientului, posibilitate operare cu senzor digital sau film.
+									</p>
 								</div>
 							</div>
 							<div class="col-xl-3 col-md-6 col-12">
-								<div class="card m-3 px-md-4 px-2 pt-lg-5 pt-md-3 pt-2 m-0">
-									<div class="text-head p-md-2 mb-0 text-white">PANORAMIC</div>
-									<p class="text-white font-primary fs-md-5 fs-10 col-md-8 col-12">
+								<div class="card m-2 px-md-4 px-2 pt-lg-5 pt-md-3 pt-2 m-0">
+									<div class="text-head py-md-2 mb-0 text-white text-sm-start text-center py-1">PANORAMIC</div>
+									<p class="text-white font-primary fs-10 col-md-8 col-12">
 										Investigație radiologica dentară care utilizează razele X
 										pentru crearea unei imagini de ansamblu a întregii cavități orale.
 									</p>
 									<div class="cta">
-										<a href="#" class="btn btn--anis"><span class="px-4">Citeste...</span></a>
+										<a href="#" class="btn btn--anis"><span class="px-lg-4 px-3 ">Citeste...</span></a>
 									</div>
 								</div>
 							</div>
 							<div class="col-xl-3 col-md-6 col-12">
-								<div class="card m-3 px-md-4 px-2 pt-lg-5 pt-md-3 pt-2 m-0">
-									<div class="text-head p-md-2 mb-0 text-white">CBCT-3D</div>
-									<p class="text-white font-primary fs-md-5 fs-10">Tomografie Computerizată cu
+								<div class="card m-2 px-md-4 px-2 pt-lg-5 pt-md-3 pt-2 m-0">
+									<div class="text-head py-md-2 mb-0 text-white text-sm-start text-center py-1">CBCT-3D</div>
+									<p class="text-white font-primary fs-md-10 fs-10">Tomografie Computerizată cu
 										Fascicul Conic este o tehnică
 										avansată de
 										imagistică dentară care furnizează imagini tridimensionale (3D) detaliate ale
 										structurilor dentare și osoase.
 									</p>
 									<div class="cta">
-										<a href="#" class="btn btn--anis"><span class="px-4">Citeste...</span></a>
+										<a href="#" class="btn btn--anis"><span class="px-lg-4 px-3 ">Citeste...</span></a>
 									</div>
 								</div>
 							</div>
 							<div class="col-xl-3 col-md-6 col-12">
-								<div class="card m-3 px-md-4 px-2 pt-lg-5 pt-md-3 pt-2 m-0">
-									<div class="text-head p-md-2 mb-0 text-white">TELERADIOGRAFIE</div>
-									<p class="text-white font-primary fs-md-5 fs-10">În special, în ortodonție,
+								<div class="card m-2 px-md-4 px-2 pt-lg-5 pt-md-3 pt-2 m-0">
+									<div class="text-head py-md-2 mb-0 text-white text-sm-start text-center py-1">TELERADIOGRAFIE</div>
+									<p class="text-white font-primary fs-10">În special, în ortodonție,
 										cephalometria este utilizată pentru
 										a
 										evalua și
@@ -113,7 +109,7 @@
 										ortodontice.
 									</p>
 									<div class="cta">
-										<a href="#" class="btn btn--anis"><span class="px-4">Citeste...</span></a>
+										<a href="#" class="btn btn--anis"><span class="px-lg-4 px-3 ">Citeste...</span></a>
 									</div>
 								</div>
 							</div>
@@ -122,22 +118,23 @@
 							<img class="js-slide-right machine1" src="./images/sections/img1.png" alt="machine1">
 						</div>
 					</div>
-				</div>
 			</div>
-		</section>
+		</section> -->
 		<!-- First page end -->
 
 		<!-- microscope page -->
-		<section class="section microscope bg-second img-bot img-left">
+		<!-- <section class="section microscope bg-second img-bot img-left">
 			<div class="container">
 				<div class="img-left d-flex flex-column">
-					<div class="row justify-content-start ">
-						<div class="js-slide-left">
-							<img class="logo py-5" src="./images/logo.svg" alt="Logo">
-							<div class="text">
-								<div class="text_head font-primary">TRATAMENTE LA MICROSCOP</div>
-								<h2 class="text_second pt-5">REFâ-TIZĂMBETUL, DETALIU CU DETALIU!</h2>
-								<p class="text_primary font-primary">
+					<div class="row">
+						<div class="js-slide-left z-2">
+							<img class="logo py-lg-5" src="./images/logo.svg" alt="Logo">
+							<div class="text text-lg-start text-center">
+								<div class="text_head font-primary text-lg-start text-center">
+									TRATAMENTE LA MICROSCOP
+								</div>
+								<h2 class="text_second pt-lg-5">REFÂ-TIZĂMBETUL, DETALIU CU DETALIU!</h2>
+								<p class="text_primary font-primary text-lg-start text-center mb-lg-5">
 									Cu specialisști în endodontie și tehnologie de vârf, ne propunem să redăm sănătatea
 									din
 									interiorul dinților tăi. Microscopul în endodontie permite proceduri precise,
@@ -148,13 +145,13 @@
 						</div>
 					</div>
 
-					<div class="row pt-5 mt-5 js-slide-down">
-						<div class="col-5 pt-5 mt-5">
-							<div class="">
+					<div class="row pt-lg-5 mt-lg-5 js-slide-down px-2">
+						<div class="col-lg-5 col-12 pt-lg-5 mt-lg-5">
+							<div class="text-lg-start text-center">
 								<a href="#" class="btn btn--square"><span class="text-white">SERVICII</span></a>
 							</div>
-							<div class="row d-flex justify-content-end">
-								<div class="h5 col-9">
+							<div class="row d-flex justify-content-lg-end justify-content-center">
+								<div class="h5 col-9 text-lg-start text-center">
 									<h5 class="pt-4">REFACEREA TRATAMENTELOR DE CANAL</h5>
 									<h5>IDENTIFICAREA CANALELOR SUPLIMENTARE</h5>
 									<h5>ÎNDEPĂRTAREA ACELOR RUPTE</h5>
@@ -163,15 +160,15 @@
 							</div>
 
 						</div>
-						<div class="col-2">
+						<div class="col-lg-2 col-0 d-lg-block d-none">
 							<div class="line"></div>
 						</div>
-						<div class="col-5 pt-5 mt-5">
-							<div class="">
+						<div class="col-lg-5 col-12 pt-lg-5 mt-lg-5">
+							<div class="text-lg-start text-center">
 								<a href="#" class="btn btn--square"><span class="text-white">BENEFICII</span></a>
 							</div>
-							<div class="row d-flex justify-content-end">
-								<div class="h5 col-9 text-black">
+							<div class="row d-flex justify-content-lg-end justify-content-center">
+								<div class="h5 col-9 text-black text-lg-start text-center">
 									<h5 class="pt-4">INTERVENȚIE 100% PRECISĂ</h5>
 									<h5>O SINGURĂ ȘEDINȚĂ</h5>
 									<h5>FĂRĂ RISCURI</h5>
@@ -188,19 +185,19 @@
 
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<!-- Microscope end -->
 
 		<!-- ortodontie start -->
-		<section class="section ortodontie bg-third">
-			<div class="container-fluid">
+		<!-- <section class="section ortodontie bg-third">
+			<div class="container-fluid d-flex flex-column">
 				<div class="container">
 					<div class="row ">
 						<img class="logo py-5 row js-slide-up" src="./images/logo.svg" alt="Logo">
 					</div>
 					<div class="row">
-						<div class="column js-slide-downleft col-6">
-							<div class="row d-flex justify-content-end">
+						<div class="column js-slide-downleft col-xxl-6 col-12">
+							<div class="row d-flex justify-content-xxl-end justify-content-center">
 								<div class="col-10">
 									<div class="text-center text_second p-3 pt-5 mt-5">GALERIE FOTO</div>
 									<div class="row d-flex justify-content-end pt-3">
@@ -208,7 +205,8 @@
 											<div class="pt-2 d-flex justify-content-end pb-0">
 												<div class="search-box pb-0">
 													<input type="text" placeholder="search" name="search"
-														class="search-input form-control ps-5 ms-2">
+														class="search-input form-control ps-5 ms-2" id="search"
+														value="">
 													<i class="fa fa-search"></i>
 													<i class="fa fa-close"></i>
 												</div>
@@ -247,19 +245,16 @@
 								</div>
 							</div>
 						</div>
-						<div class="column js-slide-upright col-6 text-end p-2">
+						<div class="column js-slide-upright col-xxl-6 col-12 text-xl-end text-center p-2">
 
 							<div class="text">
-								<div class="text_head font-primary">
-									<span class="">
-										ORTODONȚIE
-									</span>
+								<div class="text_head font-primary text-center text-xxl-end pt-lg-5">
+										Servicii ORTODONȚIE
 								</div>
-								<h2 class="text_subhead pt-4">ZÂMBETUL TĂU, RECONFIFURAT!</h2>
-								<p class="text_primary font-primary">
-									La Clinica VitalisDent®, transformăm zâmbetele și schimbăm vieți. Cu o
-									echipă
-									dedicată de specialiști în ortodonție<br> și tehnici inovatoare, ne propunem
+								<div class="text_subhead pt-sm-4 pt-0">ZÂMBETUL TĂU, RECONFIFURAT!</div>
+								<p class="text_primary font-primary text-center text-xxl-end">
+									La Clinica VitalisDent®, transformăm zâmbetele și schimbăm vieți. Cu o echipă
+									dedicată de specialiști în ortodonție și tehnici inovatoare, ne propunem
 									să-ți
 									oferim un zâmbet perfect, echilibrat și sănătos.
 								</p>
@@ -270,34 +265,35 @@
 
 					</div>
 				</div>
-				<div class="detail-box js-slide-right text-end rounded-4">
-					<h3>APARATE DENTARE PENTRU COPII ȘI ADULȚI
+				<div class="detail-box js-slide-right text-xxl-end text-center rounded-4">
+					<div>APARATE DENTARE PENTRU COPII ȘI ADULȚI
 						<br>APARATE CERAMICE SAU DIN SAFIR
 						<br>CONSULTAȚIE ȘI CONSILIERE DE SPECIALITATE
-					</h3>
-					<div class="">
+					</div>
+					<div class="my-lg-3 mt-2">
 						<a href="#" class="btn btn--outline rounded-pill"><span class="px-5">DETALII</span></a>
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<!-- ortodontie end -->
 
 
 		<!-- Implatologie start -->
-		<section class="section implantologie bg-fourth">
+		<!-- <section class="section implantologie bg-fourth">
 			<div class="container">
 				<img class="logo py-5 row js-slide-up" src="./images/logo.svg" alt="Logo">
 				<div class="main-box">
 					<div class="p-2">
 						<div class="text">
-							<div class="text_head font-primary js-slide-right">IMPLANTOLOGIE & MICROCHIRURGIE</div>
+							<div class="text_head font-primary js-slide-right text-xxl-start text-center">
+								IMPLANTOLOGIE & MICROCHIRURGIE</div>
 							<div class="row d-flex flex-row">
-								<div class="col-6 column js-slide-left">
-									<h2 class="text_subhead pt-4 text-black">REVOLUȚIONÂND ZÂMBETELE CU PRECIZIE ȘI
+								<div class="col-xxl-6 col-12 column js-slide-left text-xxl-start text-center">
+									<div class="text_subhead pt-4 text-black">REVOLUȚIONÂND ZÂMBETELE CU PRECIZIE ȘI
 										MĂIESTRIE!
-									</h2>
-									<p class="text_primary font-primary">
+									</div>
+									<div class="text_primary font-primary text-xxl-start text-center">
 										Noi aducem detaliul și perfecțiunea în reparația și restaurarea zâmbetelor.
 										Folosind
 										tehnici avansate de implantologie și microchirurgie, transformăm zâmbetele și
@@ -308,7 +304,7 @@
 										proceduri delicate de microchirurgie, punem bazele unor soluții personalizate
 										pentru
 										înlocuirea dinților lipsă, fără durere și cu o vindecare rapidă.
-									</p>
+									</div>
 									<div class="pt-3">
 										<a href="#" class="btn btn--anis rounded-pill">
 											<span class="px-4 text-white">
@@ -317,7 +313,8 @@
 										</a>
 									</div>
 								</div>
-								<div class="col-6 column">
+								<div
+									class="col-xxl-6 col-12 column d-flex justify-content-xxl-start justify-content-center">
 									<img class="implant js-slide-downleft" src="./images/sections/implant.png"
 										alt="implant">
 								</div>
@@ -327,23 +324,24 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<!-- Implantologie end -->
 
 
 		<!-- Protetica start -->
-		<section class="section protetica bg-fifth img-bot img-left">
+		<!-- <section class="section protetica bg-fifth img-bot img-left">
 			<div class="container">
 				<img class="logo py-5 row js-slide-up" src="./images/logo.svg" alt="Logo">
 				<div class="row d-flex align-items-center">
-					<div class="main-box col-7 column z-2 js-slide-left">
+					<div class="main-box col-xxl-7 column z-2 js-slide-left">
 						<div class="text">
-							<div class="text_head font-primary">
+							<div class="text_head font-primary text-xxl-start text-center">
 								PROTETICĂ ZIRCONIU ȘI METALO-CERAMICĂ
 							</div>
-							<h2 class="text_subhead pt-4 text-black mb-0">ZÂMNETE DURABILE, REZISTENȚĂ ULUITOARE!
+							<h2 class="text_subhead pt-4 text-black mb-0  text-xxl-start text-center">
+								ZÂMNETE DURABILE, REZISTENȚĂ ULUITOARE!
 							</h2>
-							<p class="text_primary font-primary">
+							<p class="text_primary font-primary text-xxl-start text-center">
 								Materialul de zirconiu oferă o rezistență extraordinară și un aspect natural, în
 								timp ce metalo-ceramica combină soliditatea metalului cu aspectul
 								estetic al ceramicii. Indiferent de necesitățile tale protetice, suntem aici pentru
@@ -353,14 +351,14 @@
 							</p>
 						</div>
 					</div>
-					<div class="col-5 column d-flex justify-content-end">
+					<div class="col-xxl-5 column d-flex justify-content-xxl-end justify-content-center">
 						<img class="dental_implant js-slide-upright" src="./images/sections/dentalimplant.png"
 							alt="dental_implant">
 					</div>
 				</div>
 			</div>
 			<img class="bottom-img js-slide-down z-1" src="./images/sections/protetica.png" alt="protetica">
-		</section>
+		</section> -->
 		<!-- Protetica end -->
 
 		<!-- team start -->
@@ -368,7 +366,7 @@
 			<div class="container-fluid">
 				<div class="js-slide-up">
 					<div class="d-flex justify-content-center">
-						<img class="logo py-5 row" src="./images/logo.svg" alt="Logo">
+						<img class="logo py-lg-5 py-1 row" src="./images/logo.svg" alt="Logo">
 					</div>
 					<div class="text text-center">
 						<div class="text_head font-primary">
@@ -379,10 +377,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="d-flex justify-content-around js-slide-right">
-					<div class="member-box text-center pt-5">
-						<img src="./images/sections/avatar1.png">
-						<div class="text_primary fw-bold fs-2">
+				<div class="members js-slide-right d-flex flex-wrap justify-content-around">
+					<div class="member-box text-center ">
+						<img class="avatar" src="./images/sections/avatar1.png">
+						<div class="text_primary text-center">
 							As. LEORDEAN DORINA
 						</div>
 						<hr class="mb-1">
@@ -430,9 +428,9 @@
 							</a>
 						</div>
 					</div>
-					<div class="member-box text-center pt-5">
-						<img src="./images/sections/avatar2.png">
-						<div class="text_primary fw-bold fs-2">
+					<div class="member-box text-center">
+						<img class="avatar" src="./images/sections/avatar2.png">
+						<div class="text_primary   text-center">
 							Dr. MOISA SIMONA
 						</div>
 						<hr class="mb-1">
@@ -480,9 +478,9 @@
 							</a>
 						</div>
 					</div>
-					<div class="member-box text-center pt-5">
-						<img src="./images/sections/avatar3.png">
-						<div class="text_primary fw-bold fs-2">
+					<div class="member-box text-center">
+						<img class="avatar" src="./images/sections/avatar3.png">
+						<div class="text_primary  text-center">
 							Dr. TOMOIAGĂ LAURA
 						</div>
 						<hr class="mb-1">
@@ -530,9 +528,9 @@
 							</a>
 						</div>
 					</div>
-					<div class="member-box text-center pt-5">
-						<img src="./images/sections/avatar4.png">
-						<div class="text_primary fw-bold fs-2">
+					<div class="member-box text-center">
+						<img class="avatar" src="./images/sections/avatar4.png">
+						<div class="text_primary  text-center">
 							Dr. STAN V. IONUȚ
 						</div>
 						<hr class="mb-1">
@@ -580,9 +578,10 @@
 							</a>
 						</div>
 					</div>
-					<div class="member-box text-center pt-5">
-						<img src="./images/sections/avatar5.png">
-						<div class="text_primary fw-bold fs-2">
+					
+					<div class="member-box text-center">
+						<img class="avatar" src="./images/sections/avatar5.png">
+						<div class="text_primary  text-center">
 							Ar. tOMOIAGA IOANA
 						</div>
 						<hr class="mb-1">
@@ -684,25 +683,26 @@
 					</div>
 				</div>
 
-				<div class="row d-flex justify-content-around">
-					<div class="column col-6 p-0 js-slide-left">
+				<div class="row d-flex justify-content-around me-3">
+					<div class="column col-md-6 col-12 p-md-0 d-md-block d-flex justify-content-center js-slide-left">
 						<img src="./images/sections/map.png" class="map px-3 rounded-4">
 					</div>
-					<div class="column col-6 p-0 js-slide-right">
-						<form action="#" class=" mx-3 d-flex flex-column">
+					<div
+						class="column col-md-6 col-12 p-md-0 pt-3 js-slide-right d-md-block d-flex justify-content-center">
+						<form action="#" class=" mx-3 d-flex flex-column form">
 							<div class="input-box">
 								<label for="numele" class="text_primary pe-3">NUMELE DVS :</label>
-								<input type="text" name="numele" class="input-underline">
+								<input type="text" name="numele" class="input-underline text-black">
 							</div>
 							<div class="input-box">
 								<label for="email" class="text_primary pe-3">EMAIL :</label>
-								<input type="text" name="email" class="input-underline">
+								<input type="text" name="email" class="input-underline text-black">
 							</div>
 							<div class="textarea-box">
 								<div class="pe-3">MESASUL :</div>
-								<textarea></textarea>
+								<textarea class="text-black"></textarea>
 							</div>
-							<button type="submit" class="btn btn--anis rounded-pill mt-5 text-center">
+							<button type="submit" class="btn btn--anis rounded-pill mt-xl-5 mt-2 text-center">
 								<span class="submit-btn text-white"> MEASJUL</span>
 							</button>
 						</form>
@@ -717,9 +717,11 @@
 
 
 	</main>
-	<footer>
-		<div class="copyrignt z-0">(c) 2023 by VitalisDent ® . Toate drepturile rezervate</div>
+
+	<footer class="text-center">
+		<p class="copyrignt z-0">(c) 2023 by VitalisDent ® . Toate drepturile rezervate</p>
 	</footer>
+
 </body>
 
 </html>

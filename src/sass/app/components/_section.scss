@@ -85,16 +85,64 @@
       z-index: 0;
     }
   }
+
+  .text_subhead {
+    @include mq(960px) {
+      text-align: center;
+      font-size: 3rem;
+    }
+    @include mq-max(768px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  .text_head {
+    @include mq(768px) {
+      font-size: 4rem;
+      font-weight: bold;
+      line-height: normal;
+      text-align: start;
+    }
+    @include mq(1400px) {
+      font-size: 6rem;
+      line-height: normal;
+      text-align: start;
+    }
+    @include mq-max(768px) {
+      font-size: 2.5rem;
+      line-height: normal;
+      text-align: center;
+    }
+  }
 }
 
 .index {
+  .text_head {
+    @include mq(768px) {
+      font-size: 4rem;
+      font-weight: bold;
+      line-height: normal;
+      text-align: start;
+    }
+    @include mq(1200px) {
+      font-size: 6rem;
+      line-height: normal;
+      text-align: start;
+    }
+    @include mq-max(768px) {
+      font-size: 2.5rem;
+      line-height: normal;
+      text-align: center;
+    }
+  }
   .text {
-    @include mq(768px){
+    @include mq(768px) {
       padding-top: 8rem;
     }
-    padding-top: 1rem;
+    padding-top: 0rem;
   }
   .logo {
+    cursor: pointer;
     position: relative;
   }
   .machine1 {
@@ -105,41 +153,69 @@
     transform: translate(0);
     width: 60%;
   }
+
+  .card {
+    p {
+      @include mq(526px) {
+        font-size: 13px;
+        text-align: start;
+      }
+      font-size: 11px;
+      text-align: center;
+    }
+  }
+
   .btn--anis {
     @include mq(768px) {
       @include bg-color($primary-color);
-    border: none;
-    font-size: 1.5rem;
-    font-weight: normal;
-    color: white;
+      border: none;
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: white;
     }
-    @include bg-color($transparency);
-    border: solid $primary-color 2px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: rgb(0, 60, 138);
+    @include mq-max(768px) {
+      @include bg-color($primary-color);
+      border: none;
+      font-size: 1rem;
+      font-weight: normal;
+      color: rgb(255, 255, 255);
+      padding: 0.5rem;
+      top: 0.5rem;
+      right: 2.5rem;
+      bottom: auto;
+    }
   }
 }
 
 .microscope {
-
   .logo {
+    cursor: pointer;
     position: relative;
   }
-  
+
   .section__image img {
     position: absolute;
     top: 0;
     right: 0;
     width: 30%;
+    min-width: 20rem;
     bottom: 0;
   }
 
   .text {
-    padding-top: 8.8em;
+    padding-top: 8%;
     width: 100%;
+    // .text_head {
+    //   @include mq(1200px){
+    //     font-size: 3rem;
+    //   }
+    //   font-size: 1rem;
+    // }
     p {
-      width: 45%;
+      @include mq(992px) {
+        width: 45%;
+      }
+      width: 100%;
     }
   }
 
@@ -152,17 +228,37 @@
 
 .ortodontie {
   .text_head {
-    text-align: end;
+    @include mq(768px) {
+      font-size: 4rem;
+      font-weight: bold;
+      line-height: normal;
+      text-align: start;
+    }
+    @include mq(1400px) {
+      font-size: 6rem;
+      line-height: normal;
+      text-align: start;
+    }
+    @include mq-max(768px) {
+      font-size: 2.5rem;
+      line-height: normal;
+      text-align: center;
+    }
   }
+
   .text_primary {
     text-align: end;
+    font-size: 14px;
   }
   .gallery {
     padding-top: 7rem;
   }
 
   .text {
-    padding-top: 25rem;
+    @include mq(1400px) {
+      padding-top: 25rem;
+    }
+    padding: auto;
   }
 
   .search-box {
@@ -192,10 +288,23 @@
   }
 
   .gallery-box {
+    @include mq(768px) {
+      background-color: rgb(245, 246, 250);
+      border-radius: 10px;
+      overflow: scroll;
+      height: 40vh;
+    }
+    @include mq(1400px) {
+      background-color: rgb(245, 246, 250);
+      border-radius: 10px;
+      overflow: scroll;
+      height: 83vh;
+    }
     background-color: rgb(245, 246, 250);
     border-radius: 10px;
     overflow: scroll;
-    height: 83vh;
+    height: 30vh;
+    width: auto;
   }
 
   .gallery {
@@ -210,20 +319,52 @@
   }
 
   .detail-box {
-    padding: 3rem 20rem 2rem 3rem;
-    position: absolute;
-    right: -2rem;
-    top: 56vh;
-    color: white;
-    @include bg-color($primary-color-opacity);
+    @include mq(768px) {
+      margin: 0 4rem;
+      position: relative;
+      color: white;
+      @include bg-color($primary-color-opacity);
+      padding: 1.5rem;
+      font-size: 2rem;
+      line-height: 3.5rem;
+    }
+    @include mq(1400px) {
+      font-size: 2.1rem;
+      line-height: 3.5rem;
+      padding: 3rem 20rem 2rem 3rem;
+      position: absolute;
+      right: -2rem;
+      top: 56vh;
+      color: white;
+      margin: 0;
+      @include bg-color($primary-color-opacity);
+    }
+    @include mq-max(768px) {
+      margin: 0;
+      position: relative;
+      color: white;
+      @include bg-color($primary-color-opacity);
+      padding: 1.5rem;
+      font-size: 1.4rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  .container {
+    height: auto;
   }
 }
 
 .implantologie {
   .main-box {
+    @include mq(1400px) {
+      width: auto;
+      height: 100vh;
+      padding-top: 23rem;
+    }
     width: auto;
     height: 100vh;
-    padding-top: 23rem;
+    padding-top: 9rem;
   }
 
   .text {
@@ -231,14 +372,27 @@
   }
 
   .implant {
-    width: auto;
+    @include mq(1400px) {
+      width: 33%;
+      min-width: 10rem;
+      height: auto;
+      position: absolute;
+      top: 2rem;
+    }
+    width: 33%;
+    min-width: 20rem;
     height: auto;
-    position: absolute;
     top: 2rem;
   }
 }
 
 .protetica {
+  .main-box {
+    @include mq(1400px) {
+      padding-top: 0rem;
+    }
+    padding-top: 10rem;
+  }
   .bottom-img {
     position: absolute;
     width: 100vw;
@@ -253,26 +407,99 @@
   .align-items-center {
     height: 70vh;
   }
+
+  .dental_implant {
+    @include mq(1400px) {
+      width: 75%;
+    }
+    width: 37.5%;
+    min-width: 30rem;
+  }
 }
 
 .team {
   .text_head {
+    @include mq(960px) {
+      text-align: center;
+      font-size: 5rem;
+    }
     text-align: center;
+    font-size: 3rem;
   }
+
   .logo {
+    cursor: pointer;
     position: relative;
     width: auto;
     height: auto;
   }
 
-  .member-box {
-    scale: 0.8;
-    .bg-white {
-      border: 0.5px solid #e2e2e2;
+  .flex-wrap {
+    width: auto;
+
+    row-gap: 10px;
+  }
+
+  @include mq(1570px) {
+    .member-box {
+      width: 30rem;
+      height: auto;
+      margin: 8rem 5px;
+    }
+    .avatar {
+      width: 75%;
+      height: auto;
     }
 
     .btn--anis {
+      width: 100%;
+    }
+  }
+
+  @include mq(960px) {
+    .member-box {
       width: 30rem;
+      height: auto;
+      padding: 0 5px;
+    }
+    .btn--anis {
+      width: 100%;
+    }
+    .avatar {
+      width: 60%;
+      height: auto;
+    }
+    .text_primary {
+      font-size: 2.3rem;
+      font-weight: bold;
+    }
+  }
+
+  @include mq-max(960px) {
+    .member-box {
+      width: auto;
+      .text_primary {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+      padding: 0 5px;
+      .avatar {
+        width: 35%;
+        height: auto;
+      }
+
+      // border: #000000 solid;
+      width: 25rem;
+      height: auto;
+
+      .bg-white {
+        border: 0.5px solid #e2e2e2;
+        width: 100%;
+      }
+
+      .btn--anis {
+        width: 100%;
+      }
     }
   }
 }
@@ -283,7 +510,11 @@
   }
 
   .text_head {
-    font-size: 5rem;
+    @include mq(768px) {
+      font-size: 5rem;
+      text-align: center;
+    }
+    font-size: 3rem;
     text-align: center;
   }
 
@@ -292,26 +523,78 @@
   }
 
   .map {
-    width: 100%;
-    height: 58vh;
+    @include mq(768px) {
+      width: 100%;
+      height: 40vw;
+    }
+    @include mq(1200px) {
+      width: 100%;
+      height: 58vh;
+    }
+
+    @include mq-max(768px) {
+      width: 60%;
+      min-width: 35rem;
+      height: 25rem;
+    }
   }
 
   form {
-    width: 100%;
-    height: 58vh;
+    @include mq(768px) {
+      width: 100%;
+      height: 40vw;
+    }
+    @include mq(1200px) {
+      width: 100%;
+      height: 58vh;
+    }
+    @include mq-max(768px) {
+      width: 60%;
+      min-width: 33rem;
+      height: 35rem;
+    }
+  }
+  form {
+    // width: 100%;
+    // height: 58vh;
     border: 1px solid #318470;
     justify-content: center;
     align-items: center;
 
     .input-box {
-      display: flex;
-      justify-content: flex-end;
-      width: 80%;
-      padding-top: 1.5rem;
+      @include mq(1300px) {
+        display: flex;
+        justify-content: flex-end;
+        width: 58rem;
+        padding-top: 1.5rem;
+      }
+      @include mq(1050px) {
+        display: flex;
+        justify-content: flex-end;
+        width: 50rem;
+        padding-top: 1.5rem;
+      }
+      @include mq-max(1050px) {
+        display: flex;
+        justify-content: flex-end;
+        width: 30rem;
+        padding-top: 1.5rem;
+      }
     }
 
     input {
-      width: 80%;
+      @include mq(1050px) {
+        width: 76%;
+        border: none;
+        border-bottom: solid #bdbdbd 0.5px;
+        background: transparent;
+        &:focus {
+          border: none;
+          outline: none;
+          border-bottom: solid #000000 0.5px;
+        }
+      }
+      width: 18rem;
       border: none;
       border-bottom: solid #bdbdbd 0.5px;
       background: transparent;
@@ -323,16 +606,48 @@
     }
 
     .textarea-box {
-      padding-top: 1.5rem;
-      width: 80%;
-      height: auto;
-      display: flex;
-      justify-content: flex-end;
+      @include mq(1300px) {
+        padding-top: 1.5rem;
+        width: 58rem;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+      }
+      @include mq(1050px) {
+        padding-top: 1.5rem;
+        width: 50rem;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+      }
+      @include mq-max(1050px) {
+        padding-top: 1.5rem;
+        width: 30rem;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+      }
     }
 
     textarea {
-      width: 80%;
-      height: 25rem;
+      @include mq(1050px) {
+        width: 76%;
+        height: 23rem;
+        padding: 12px 20px;
+        // box-sizing: border-box;
+        border: solid #bdbdbd 0.5px;
+        border-radius: 4px;
+        background-color: transparent;
+        font-size: 16px;
+        resize: none;
+
+        &:focus {
+          outline: none;
+          border: solid #000000 0.5px;
+        }
+      }
+      width: 18rem;
+      height: 12rem;
       padding: 12px 20px;
       // box-sizing: border-box;
       border: solid #bdbdbd 0.5px;

@@ -17,3 +17,4 @@ import '../../node_modules/video.js/dist/video-js.min.css';
 
 import './vendors/fullPage.js';
 import './loader.js';
+import './event.js';
