@@ -44,7 +44,7 @@ export function setSectionElsTranslate(parent = document){
 		el.style.transform = 'translateY(-150%)';
 	});
 	jsSlideDownEls.forEach(el => {
-		el.style.transform = 'translateY(150%)';
+		el.style.transform = 'translateY(250%)';
 	});
 	jsSlideBot.forEach(el => {
 		el.style.transform = 'translateY(150%)';

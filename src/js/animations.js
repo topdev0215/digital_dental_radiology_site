@@ -51,7 +51,7 @@ export function sectionAnimation(section) {
     
     .add({
         targets: section.querySelector('.js-slide-down'),
-        translateY: ['150%', 0],
+        translateY: ['250%', 0],
         translateZ: 0,
     }, `-=${DURATION}`)
 
@@ -96,7 +96,7 @@ export function sectionLeaveAnimation(section) {
     }, 0)
     .add({
         targets: section.querySelector('.js-slide-down'),
-        translateY: '150%',
+        translateY: '250%',
         translateZ: 0,
     }, 0)
     .add({

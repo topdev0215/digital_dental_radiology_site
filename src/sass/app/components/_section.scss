@@ -88,11 +88,12 @@
 
   .text_subhead {
     @include mq(960px) {
-      text-align: center;
+      text-align: start;
       font-size: 3rem;
     }
     @include mq-max(768px) {
       font-size: 1.8rem;
+      padding-top: 1.5rem;
     }
   }
 
@@ -214,10 +215,14 @@
     p {
       @include mq(992px) {
         width: 45%;
+        font-size: 1.5rem;
       }
+      font-size: 1.5rem;
       width: 100%;
     }
   }
+
+  
 
   .line {
     width: 10rem;
@@ -244,6 +249,12 @@
       line-height: normal;
       text-align: center;
     }
+  }
+  .text_subhead{
+    @include mq(1400px) {
+      text-align: end;
+    }
+    text-align: center;
   }
 
   .text_primary {
@@ -353,6 +364,10 @@
   .container {
     height: auto;
   }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .implantologie {
@@ -418,6 +433,35 @@
 }
 
 .team {
+  .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+  }
+
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
   .text_head {
     @include mq(960px) {
       text-align: center;
@@ -425,6 +469,9 @@
     }
     text-align: center;
     font-size: 3rem;
+  }
+  .text_subhead{
+    text-align: center;
   }
 
   .logo {
@@ -434,31 +481,18 @@
     height: auto;
   }
 
-  .flex-wrap {
-    width: auto;
-
-    row-gap: 10px;
+  .avatar {
+    width: 75%;
+    height: auto;
   }
 
-  @include mq(1570px) {
-    .member-box {
-      width: 30rem;
-      height: auto;
-      margin: 8rem 5px;
-    }
-    .avatar {
-      width: 75%;
-      height: auto;
-    }
-
-    .btn--anis {
-      width: 100%;
-    }
+  .btn--anis {
+    width: 100%;
   }
 
   @include mq(960px) {
     .member-box {
-      width: 30rem;
+      width: 100%;
       height: auto;
       padding: 0 5px;
     }
@@ -477,19 +511,19 @@
 
   @include mq-max(960px) {
     .member-box {
-      width: auto;
+      width: 100%;
       .text_primary {
         font-size: 1.8rem;
         font-weight: bold;
       }
       padding: 0 5px;
       .avatar {
-        width: 35%;
+        width: 55%;
         height: auto;
       }
 
       // border: #000000 solid;
-      width: 25rem;
+      width: 100%;
       height: auto;
 
       .bg-white {
@@ -514,12 +548,17 @@
       font-size: 5rem;
       text-align: center;
     }
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
   }
 
   .text_primary {
+    @include mq(768px) {
+      font-size: 1.6rem;
+      text-align: center;
+    }
     text-align: center;
+    font-size: 1.2rem;
   }
 
   .map {
@@ -532,10 +571,10 @@
       height: 58vh;
     }
 
-    @include mq-max(768px) {
-      width: 60%;
+    @include mq-max(1100px) {
+      width: 100%;
       min-width: 35rem;
-      height: 25rem;
+      height: 32rem;
     }
   }
 
@@ -551,7 +590,7 @@
     @include mq-max(768px) {
       width: 60%;
       min-width: 33rem;
-      height: 35rem;
+      height: 32rem;
     }
   }
   form {
@@ -577,7 +616,7 @@
       @include mq-max(1050px) {
         display: flex;
         justify-content: flex-end;
-        width: 30rem;
+        width: 32rem;
         padding-top: 1.5rem;
       }
     }
@@ -594,7 +633,7 @@
           border-bottom: solid #000000 0.5px;
         }
       }
-      width: 18rem;
+      width: 22rem;
       border: none;
       border-bottom: solid #bdbdbd 0.5px;
       background: transparent;
@@ -646,7 +685,7 @@
           border: solid #000000 0.5px;
         }
       }
-      width: 18rem;
+      width: 22rem;
       height: 12rem;
       padding: 12px 20px;
       // box-sizing: border-box;
@@ -666,5 +705,10 @@
       font-weight: normal;
       padding: 0.8rem 6rem;
     }
+
+    .swiper-wrapper{
+      position: relative;
+    }
+
   }
 }
