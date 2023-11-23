@@ -18,7 +18,7 @@ Start the development server
 ```
 Build Project
 ```bash
-  npm run Build
+  npm run build
 ```
 
 ## Authors
