@@ -1,12 +1,11 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: './src/js/app.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        publicPath: './asset',
+        publicPath: '',
         filename: '[name].js'
     },
     devServer: {
@@ -49,7 +48,6 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource'
               },
-          
         ],
     },
     plugins: [

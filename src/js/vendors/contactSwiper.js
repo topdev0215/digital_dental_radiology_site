@@ -7,13 +7,10 @@ import "swiper/scss/autoplay";
 const swiper = new Swiper('.contactSwiper', {
     slidesPerView: 1,
     direction: "horizontal",
-  
-  
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-  
     breakpoints: {
       1100: {
         slidesPerView: 2,
