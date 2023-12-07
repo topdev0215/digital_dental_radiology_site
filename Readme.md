@@ -4,7 +4,7 @@
 Pentru un diagnostic precis și planificare personalizată a tratamentului, alege expertiza noastră în imagistică dentară. Contactează-ne astăzi pentru a descoperi ce stă în spatele zâmbetului tău!
 
 
-## Installation
+## Installation with npm
 
 Install my-project with npm
 
